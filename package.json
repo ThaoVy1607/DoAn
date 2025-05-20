@@ -12,6 +12,8 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "start-server": "cd web-receiver && npm start",
+    "start-client": "cd web-display && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
