@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="img/espresso.jpg" type="image/x-icon" />
+    <title>Waveform Realtime</title>
+
+    <!-- Load thư viện Chart.js và socket.io -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>📂 Menu</h2>
+      <ul>
+        <li onclick="showContent('home')">🏠 Trang chủ</li>
+        <li onclick="showContent('old')">📘 Giá trị dữ liệu cũ</li>
+        <li onclick="showContent('contact')">📞 Liên hệ</li>
+      </ul>
+    </div>
+
+        <div class="main-content">
+        <!-- Trang chủ -->
+        <div id="home" class="tab active">
+          <h2>🌟 Trang chủ</h2>
+          <p>Chào mừng bạn đến với trang chủ!</p>
+          <canvas id="pulseChart" width="600" height="400"></canvas>
+        </div>
+
+        <!-- Trang dữ liệu cũ -->
+        <div id="old" class="tab">
+          <h2>📘 Giá trị dữ liệu cũ</h2>
+          <div id="oldDataContainer">Loading...</div>
+        </div>
+
+        <!-- Trang liên hệ -->
+        <div id="contact" class="tab">
+          <h2>📞 Liên hệ</h2>
+          <p>Email: info@example.com</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="pulse.js"></script>
+
+
+    </script>
+  </body>
+</html>
