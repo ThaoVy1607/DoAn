@@ -6,7 +6,7 @@ const app = express();
 const port = 3001;
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/sensorData', {
+mongoose.connect('mongodb://localhost:27017/testdb', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
