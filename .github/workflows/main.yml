@@ -1,0 +1,25 @@
+name: DoAn
+
+on:
+  push:
+    branches: [production]
+
+jobs:
+  deploys:
+    runs-on: debian-latest
+    steps:
+      - name: Deploy using ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER_NAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd /home/DoAn
+            git fetch origin
+            git checkout production
+            git pull
+            npm install
+            npm run build
+            pm2 reload all
