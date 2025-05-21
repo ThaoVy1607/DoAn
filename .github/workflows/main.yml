@@ -5,10 +5,10 @@ on:
     branches: [production]
 
 jobs:
-  deploys:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy using ssh
+      - name: Deploy using SSH
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -17,7 +17,7 @@ jobs:
           port: 22
           script: |
             cd /home/DoAn
-            git fetch origin
+            git fetch --all
             git checkout production
             git pull
             npm install
