@@ -6,7 +6,7 @@ on:
 
 jobs:
   deploys:
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
