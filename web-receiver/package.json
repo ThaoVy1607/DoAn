@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start-server": "cd web-receiver && node server.js",
-    "start-client": "cd web-display && npm start",
-    "start": "concurrently \"npm run start-server\" \"npm run start-client\""
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
