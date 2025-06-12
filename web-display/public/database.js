@@ -6,18 +6,19 @@ async function fetchData() {
     list.innerHTML = ''; // Xóa dữ liệu cũ
 
     data.forEach(item => {
-      const now = new Date();           // Thời gian thực hiện fetch dữ liệu
-      const date = now.toLocaleDateString();
-      const time = now.toLocaleTimeString();
+    const recordTime = new Date(item.time);  // Dùng thời gian từ MongoDB
+    const date = recordTime.toLocaleDateString();
+    const time = recordTime.toLocaleTimeString();
 
-      const row = document.createElement('tr');
-      row.innerHTML = `
-        <td>${date}</td>
-        <td>${time}</td>
-        <td>${item.value}</td>
-      `;
-      list.appendChild(row);
-    });
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${date}</td>
+      <td>${time}</td>
+      <td>${item.value}</td>
+    `;
+    list.appendChild(row);
+  });
+
   } catch (err) {
     document.getElementById('dataList').innerHTML = `
       <tr><td colspan="3">Lỗi kết nối server!</td></tr>
