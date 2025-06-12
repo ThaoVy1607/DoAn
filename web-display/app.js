@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 const app = express();
-const port = 3001;
 
 // MongoDB connection
 mongoose.connect('mongodb://localhost:27017/testdb', {
@@ -33,7 +32,7 @@ app.get('/api/data', async (req, res) => {
         res.status(500).json({ error: 'Error fetching data' });
     }
 });
-
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
