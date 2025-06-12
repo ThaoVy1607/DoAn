@@ -32,7 +32,7 @@ const pulseChart = new Chart(ctx, {
         type: 'time',
         time: {
           unit: 'minute',
-          stepSize: 5, // Mỗi 5 phút 1 mốc
+          stepSize: 1, // Mỗi 1 phút 1 mốc
           displayFormats: {
             minute: 'HH:mm'
           }

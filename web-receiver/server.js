@@ -23,10 +23,13 @@ mongoose.connect('mongodb://localhost:27017/testdb')
 
 // ✅ Tạo Schema để lưu dữ liệu
 const pulseSchema = new mongoose.Schema({
-  time: String,
+  time: String,      // thời gian dạng chuỗi (cho frontend)
   value: Number
+}, {
+  timestamps: true   // tự động tạo createdAt
 });
 const Data = mongoose.model('Pulse', pulseSchema);
+
 
 
 // ✅ Khi nhận dữ liệu từ MSP430

@@ -6,9 +6,9 @@ async function fetchData() {
     list.innerHTML = ''; // Xóa dữ liệu cũ
 
     data.forEach(item => {
-      const createdAt = new Date(item.createdAt);
-      const date = createdAt.toLocaleDateString();
-      const time = createdAt.toLocaleTimeString();
+      const now = new Date();           // Thời gian thực hiện fetch dữ liệu
+      const date = now.toLocaleDateString();
+      const time = now.toLocaleTimeString();
 
       const row = document.createElement('tr');
       row.innerHTML = `
