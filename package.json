@@ -1,0 +1,32 @@
+{
+  "name": "doan",
+  "version": "1.0.0",
+  "description": "Tổng hợp web-receiver và web-display",
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all --parallel start:receiver start:display",
+    "start:receiver": "node web-receiver/server.js",
+    "start:display": "node web-display/app.js",
+    "dev": "npm-run-all --parallel dev:receiver start:display",
+    "dev:receiver": "nodemon web-receiver/server.js",
+    "seed": "node web-receiver/seed.js seed",
+    "seed:month": "node web-receiver/seed.js month",
+    "seed:week": "node web-receiver/seed.js days 7",
+    "seed:day": "node web-receiver/seed.js days 1",
+    "seed:add": "node web-receiver/seed.js add",
+    "seed:simulate": "node web-receiver/seed.js simulate"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
