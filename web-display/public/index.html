@@ -63,15 +63,17 @@
     <!-- Menu (Thực đơn) -->
     <section class="menu" id="menu">
         <!-- Thẻ section tạo một phần nội dung riêng biệt, đặt class="menu" để áp dụng CSS và id="menu" để định danh -->
-     
+
       <h2><span>Biểu Đồ</span> Đo Lưu Lượng Trực tiếp</h2>
       <div class="container">
         <h2>Biểu đồ Tín hiệu Xung</h2>
-        <canvas id="pulseChart" width="1000" height="700"></canvas>
+        <div style="height: 300px; position: relative;">
+          <canvas id="pulseChart"></canvas>
+        </div>
       </div>
 
       <script src="pulse.js"></script>
-      
+
     </section>
     <!-- Review (Khách quan) -->
     <section id="review" class="contact">
@@ -82,7 +84,7 @@
             <tr>
               <th>📅 Ngày</th>
               <th>⏰ Giờ</th>
-              <th>💧 Dữ liệu (Lít)</th>
+              <th>💧 Tổng Dữ liệu (Lít)</th>
             </tr>
           </thead>
           <tbody id="dataList">
@@ -90,10 +92,10 @@
           </tbody>
         </table>
 
-        
+
       </div>
 
-    
+
     </section>
     <!-- Contact (Liên hệ) -->
     <section id="contact" class="contact">
@@ -101,10 +103,10 @@
       <p>Chúng tôi rất mong được hợp tác và hy vọng quý khách sẽ gửi đánh giá...</p> <!-- Mô tả liên hệ -->
       <div class="row">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.77150305217!2d108.21342430000001!3d16.077342800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142184792140755%3A0xd4058cb259787dac!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTxrAgUGjhuqFtIEvhu7kgdGh14bqtdCAtIMSQ4bqhaSBo4buNYyDEkMOgIE7hurVuZw!5e0!3m2!1svi!2s!4v1733157337682!5m2!1svi!2s" 
-          width="550" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.77150305217!2d108.21342430000001!3d16.077342800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142184792140755%3A0xd4058cb259787dac!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTxrAgUGjhuqFtIEvhu7kgdGh14bqtdCAtIMSQ4bqhaSBo4buNYyDEkMOgIE7hurVuZw!5e0!3m2!1svi!2s!4v1733157337682!5m2!1svi!2s"
+          width="550"
           height="550"
-          style="border:0;" 
+          style="border:0;"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -139,7 +141,7 @@
         </form>
       </div>
     </section>
-   
+
     <!-- Contact -->
     <!-- Footer -->
     <footer>
@@ -156,6 +158,6 @@
     </footer>
     <!-- Footer -->
     <!-- Feather Icons -->
-    
+
   </body>
 </html>

@@ -1,8 +1,20 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const dataSchema = new mongoose.Schema({
-  time: String,   // Hoặc: Date nếu bạn muốn dùng kiểu chuẩn
-  value: Number
-});
+// Data schema for MSP circuit sensor data
+const dataSchema = new mongoose.Schema(
+  {
+    time: {
+      type: String,
+      required: true,
+    },
+    value: {
+      type: Number,
+      required: true,
+    },
+  },
+  {
+    timestamps: true, // Automatically adds createdAt and updatedAt
+  }
+);
 
-module.exports = mongoose.model('Data', dataSchema);
+module.exports = mongoose.model("Data", dataSchema);
